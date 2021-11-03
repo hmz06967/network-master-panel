@@ -1,0 +1,83 @@
+<div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
+    <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+        <img width="200px" src="/src/img/chia_master_logo1.png" class="fs-5 fw-semibold">
+    </a>
+    <ul class="list-unstyled ps-0">
+        <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                data-bs-target="#camputes-collapse" aria-expanded="false">
+                Sunucu
+            </button>
+            <div class="collapse" id="camputes-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="/panel/camputes" class="link-dark rounded">Uzak Sunucular <span
+                                class="badge text-uppercase badge-info">0</span></a></li>
+                    <li><a href="#" class="link-dark rounded">Log takibi</a></li>
+                    <li><a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                            data-value='{"f":"t.us.ssh"}' id="ssh_connect" class="link-dark rounded">SSH Bağlantısı</a>
+                    </li>
+
+                </ul>
+            </div>
+        </li>
+        <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                data-bs-target="#clouds-collapse" aria-expanded="false">
+                Çifçilik
+            </button>
+            <div class="collapse" id="clouds-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-dark rounded">Plotlar</a><span
+                            class="badge text-uppercase badge-info">0</span></li>
+                    <li><a href="/panel/clouds" class="link-dark rounded">Bulut Sunucuların</a><span
+                            class="badge text-uppercase badge-info">0</span></li>
+                    <li><a href="#" class="link-dark rounded">Plot Ayarlar</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                data-bs-target="#store-collapse" aria-expanded="false">
+                Mağaza
+            </button>
+            <div class="collapse" id="store-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-dark rounded">Satılıklar</a><span
+                            class="badge text-uppercase badge-info">0</span></li>
+                    <li><a href="#" class="link-dark rounded">Sattıkların</a></li>
+                    <li><a href="#" class="link-dark rounded">Ayarlar</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                data-bs-target="#access-collapse" aria-expanded="false">
+                Level Yükselt
+            </button>
+            <div class="collapse " id="access-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-dark rounded">İletişime Geç</a></li>
+                </ul>
+            </div>
+        </li>
+
+    </ul>
+
+    <span id="loginerbar">
+        <div class="dropdown dropdown-left">
+            <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="/src/img/icon/user.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>{{name}}</strong>
+            </a>
+            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                <li><a class="dropdown-item" href="/panel/setting">Ayarlar</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/logout">Çıkış Yap</a></li>
+            </ul>
+        </div>
+    </span>
+</div>

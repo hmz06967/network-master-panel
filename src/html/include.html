@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <title>Chia Master - Arsa Yükleyici</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <link rel="stylesheet" href="src/css/xterm.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="https://demos.creative-tim.com/vue-argon-design-system/css/app.9f49900a.css" />
+    <link rel="icon" href="src/img/favicon.ico" type="image/icon" sizes="16x16">
+
+    <script src="src/js/xterm.js"></script> 
+
+    <script> 
+      window.exports = {}
+      var event_id=[
+        "connet_ssh"=true
+      ];
+      
+      const app = {
+        "def_user":"root"
+      };
+      var box = {
+        "success_box" : '<div class="alert alert-primary alert-dismissible fade show"><strong>%s</strong>%s</div>'
+      };
+      
+
+      var ssh_coonn = function(data){
+        ///window.addEventListener('load', function() {
+          var terminalContainer = document.getElementById('terminal-container');
+          exports.term = new Terminal({ cursorBlink: true });
+          const fitAddon = new FitAddon();
+          exports.term.loadAddon(fitAddon);
+          exports.term.open(terminalContainer);
+          
+          // Make the terminal's size and geometry fit the size of #terminal-container
+          fitAddon.fit();  
+          const socket = io(window.location.origin+":3000/", { transports  : ['websocket'] });
+          socket.on('connect', function() {
+
+            socket.emit("access_data",data)
+            exports.term.write('\r\n*** Arabirim haberleşti ***\r\n');
+            response(201);
+
+            // Browser -> Backend
+            exports.term.onData(function(data) {
+              socket.emit('data', data);
+            });
+
+            // Backend -> Browser
+            socket.on('data', function(data) {
+              exports.term.write(data);
+            });
+
+            socket.on('disconnect', function() {
+              exports.term.write('\r\n*** Geçmiş olsun, bağlantı terkedildi ***\r\n');
+            });
+          });
+        //}, false);
+    }
+
+      window.addEventListener("click", function(event){
+          if(event_id[event]){
+              var data = getFormData($("#start_plot")); 
+                ssh_coonn(data)
+              /*$.post("/connect",{access_data:data}, function(r){
+                ssh_coonn()            
+              })*/ 
+              //socket.emit("access_data",data)
+          };
+          event.preventDefault();
+      });
+
+      var response = function(code, msg){
+          if(code==201){
+            var b = $("#alert-box");
+            b.innerText = box.success_box.f("Bağlantı: ","başarıyla sağlandı.");
+            b.show();
+          }
+      }
+
+      var getFormData = function ($form){
+          var unindexed_array = $form.serializeArray();
+          var indexed_array = {};
+
+          $.map(unindexed_array, function(n, i){
+              indexed_array[n['name']] = n['value'];
+          });
+
+          return indexed_array;
+      }
+    </script>
+    <script src="src/js/FitAddon.js"></script>
+</head>

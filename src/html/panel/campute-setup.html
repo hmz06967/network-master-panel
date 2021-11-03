@@ -1,0 +1,97 @@
+<form action="#" method="POST" id="machine_setup">
+
+    <div class="progress-wrapper">
+
+        <div class="progress-default">
+            <div class="progress-label"><span>Plot Ayarları</span></div>
+        </div>
+        <div class="row py-1 align-items-center">
+            <div class="col-sm-3"><small class="text-uppercase text-muted font-weight-bold">Kazıcı</small></div>
+            <div class="col-sm-9">
+                <p class="text-info mb-0">  <select class="form-select" name="plotter" id="inputGroupSelect01">
+                    <option value="1">Hpool</option>
+                    <option value="2">Swar</option>
+                    <option value="3">Madmax</option>
+                  </select></p>
+            </div>
+        </div>
+        <div class="row py-1 align-items-center">
+            <div class="col-sm-3"><small class="text-uppercase text-muted font-weight-bold">Temp Yol</small></div>
+            <div class="col-sm-9">
+                <p class="text-info mb-0"><input name="tempd" aria-describedby="addon-right addon-left" placeholder="/disk/temp/"
+                        class="form-control"></p>
+            </div>
+        </div>
+        <div class="row py-1 align-items-center">
+            <div class="col-sm-3"><small class="text-uppercase text-muted font-weight-bold">Plot Yol</small></div>
+            <div class="col-sm-9">
+                <p class="text-info mb-0"><input name="plotd" aria-describedby="addon-right addon-left" placeholder="/disk/plot/"
+                        class="form-control"></p>
+            </div>
+        </div>
+        <div class="row py-1 align-items-center">
+            <div class="col-sm-5"><small class="text-uppercase text-muted font-weight-bold">Tekrar Plot [n]</small>
+            </div>
+            <div class="col-sm-4">
+                <p class="text-info mb-0"><input name="plotn" aria-describedby="addon-right addon-left" placeholder="10"
+                        class="form-control"></p>
+            </div>
+        </div>
+        <div class="row py-2 align-items-center">
+            <div class="col-sm-5"><small class="text-uppercase text-muted font-weight-bold">Auto Copy</small></div>
+            <div class="col-sm-3">
+                <p class="text-info mb-0"><label class="custom-toggle"><input name="autocopy" type="checkbox"><span
+                            class="custom-toggle-slider rounded-circle"></span></label></p>
+            </div>
+        </div>
+        <div class="row py-2 align-items-center">
+            <div class="col-sm-5"><small class="text-uppercase text-muted font-weight-bold">Log Follow</small></div>
+            <div class="col-sm-3">
+                <p class="text-info mb-0"><label class="custom-toggle"><input name="logfollow" type="checkbox"><span
+                            class="custom-toggle-slider rounded-circle"></span></label></p>
+            </div>
+        </div>
+        <div class="row py-2 align-items-center">
+            <div class="col-sm-5"><small class="text-uppercase text-muted font-weight-bold">Auto Mount</small></div>
+            <div class="col-sm-3">
+                <p class="text-info mb-0"><label class="custom-toggle"><input name="automount" type="checkbox"><span
+                            class="custom-toggle-slider rounded-circle"></span></label></p>
+            </div>
+        </div>
+    </div>
+    <div class="progress-wrapper">
+        <div class="progress-primary">
+            <div class="progress-label"><span>Plot Sahiplik</span></div>
+            <div class="row py-1 align-items-center">
+                <div class="col-sm-3"><small class="text-uppercase text-muted font-weight-bold">Cüzdan </small></div>
+                <div class="col-sm-4">
+                    <p class="text-info mb-0">  <select class="form-select" name="plotter" id="inputGroupSelect01">
+                        <option value="1">Cüzdan #1</option>
+                      </select></p>
+                </div>
+                <div class="col-sm-4">
+                    <a href="/panel/setting#wallet" class="stretched-link">Adresi değiştir</a></div>
+            </div>
+            <div class="row py-1 align-items-center">
+                <div class="col-sm-3"><small class="text-uppercase text-muted font-weight-bold">Fpk</small></div>
+                <div class="col-sm-9">
+                    <p class="text-info mb-0">0x0000000000000000000000</p>
+                </div>
+                <div class="col-sm-3"><small class="text-uppercase text-muted font-weight-bold">Ppk</small></div>
+                <div class="col-sm-9">
+                    <p class="text-info mb-0">0x0000000000000000000000</p>
+                </div>
+            </div>
+        </div>
+        <div class="progress" style="display:none;">
+            <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                class="progress-bar bg-primary" style="width: 60%;"></div>
+        </div>
+    </div>
+
+    <div class="text-dark custom-control custom-checkbox mb-3 py-3"><input id="LRaJoWn" type="checkbox" class="custom-control-input"><label for="LRaJoWn" class="custom-control-label">
+        Kurulum yapılsın
+    </label></div>
+
+    <div role="alert" class="alert alert-danger alert-dismissible p-2 hidden form "><span class="alert-inner--text"><span>Bir hata var </span></span></div>
+</div>

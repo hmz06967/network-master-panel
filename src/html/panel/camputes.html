@@ -1,0 +1,156 @@
+<div class="container">
+    <div class="d-flex align-items-center p-3 my-3 text-white rounded ">
+        <img class="me-3" src="/src/img/icon/mack-icon.png" alt="" width="48" height="38">
+
+        <div class="d-flex align-items-center ">
+            <h1>Genel</h1>
+            <small>Chia@Ehmzkan 2021</small>
+        </div>
+        <div class="col-md-3"><button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                class="btn  mb-3 btn-block btn-success">Makine Ekle</button>
+            <div tabindex="-1" id="exampleModal" role="dialog" class="modal fade" aria-hidden="true"
+                aria-labelledby="exampleModalLabel">
+                <div class="modal-dialog modal-dialog-centered modal-danger modal-dialog-centered">
+                    <form action="#" method="POST" id="start_plot">
+                    <div class="modal-content bg-gradient-info">
+                        <div style="background: url(&quot;/src/img/icon/chia-font.png&quot;);">
+
+                            <div class="accordion" id="accordionPanelsStayOpenExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">Makine Ekle #</button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                              <div class="accordion-body">
+                                <div>
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <!---->
+                                                                        <!----> <input aria-describedby="addon-right addon-left" placeholder="İp Adresi" name="ip" class="form-control">
+                                                                        <!---->
+                                                                        <!---->
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <!---->
+                                                                        <!----> <input aria-describedby="addon-right addon-left" placeholder="Makine Adı" name="name" class="form-control">
+                                                                        <!---->
+                                                                        <!---->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group input-group">
+                                                                        <!---->
+                                                                        <div class="input-group-prepend"><span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span></div> <input aria-describedby="addon-right addon-left" placeholder="kullanıcı Adı" name="uname" class="form-control">
+                                                                        <!---->
+                                                                        <!---->
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group input-group">
+                                                                        <!---->
+                                                                        <!----> <input aria-describedby="addon-right addon-left" placeholder="Şifre" name="passw" class="form-control">
+                                                                        <div class="input-group-append"><span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span></div>
+                                                                        <!---->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div><strong>This is the first item's accordion body.</strong></div>
+                            </div>
+                          </div>
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                              <button id="new_campute_setting" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" data-form="start_plot" data-eval="cvas" data-value='{"f":"app.us.gp"}' aria-controls="panelsStayOpen-collapseTwo">Makine Ayarları</button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" aria-labelledby="panelsStayOpen-headingTwo"  class="collapse">
+                              <div class="accordion-body">
+                                </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                            
+                            
+                                                        
+                                                        <input type="hidden" name="setup" value="campute-setup">
+                        
+                                                </div>
+
+                        <div class="modal-footer" style="background: #1a325f;">
+
+                            <div id="mmodalbottom" class="modal-header d-flex p-2">
+                                <div class="bottom">
+                                    <div class="d-flex">
+                                        <h5 id="modal-title-notification" class="modal-title">Kopyala</h5><label
+                                            class="custom-toggle"> <input name="autocopy" type="checkbox" checked=""> <span
+                                                class="custom-toggle-slider rounded-circle"></span></label>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <div class="d-flex">
+                                        <h5 id="modal-title-notification" class="modal-title">Kurulum</h5><label
+                                            class="custom-toggle"> <input name="autoplot" type="checkbox"> <span
+                                                class="custom-toggle-slider rounded-circle"></span></label>
+                                    </div>
+
+                                </div>
+                                <div class="bottom" style="margin-top: 0px;display:none;">
+                                    <div class="d-flex">
+                                       
+                                        <a hred="#" type="button" id="new_campute_setting" data-form="start_plot" data-eval="cvas" data-value='{"f":"app.us.gp"}' class="ni ni-settings btn btn-outline-primary" style="border: none;font-size: 1.17em;"></a>
+
+                                    </div>
+                                </div><button id="create_campute" data-form="start_plot" data-value='{"f":"app.us.scp"}' type="button" class="btn btn-white">
+                                    <!---->
+                                     <!---->
+                                    <!---->Ekle
+                                </button>
+                            </div>
+
+
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-3 p-3 bg-body rounded shadow-sm">
+        <h4 class="border-bottom pb-2 mb-0">Makineler</h4>
+        <div class="bd-example" id="myCampute" >
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">İsim</th>
+                        <th scope="col">İp</th>
+                        <th scope="col">Tarih</th>
+                        <th scope="col">Sistem Ö.</th>
+                        <th scope="col">Durum</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+
+            </table>
+
+            <p class="text-muted text-center">Henüz makine eklemediniz.</p>
+        </div>
+
+        <small class="d-block text-end mt-3">
+            <a href="#">Tamamı</a>
+        </small>
+    </div>
+
+    <div class="my-3 p-3 bg-body rounded shadow-sm">
+        <h4 class="border-bottom pb-2 mb-0">Önerilen web siteleri</h4>
+        <div class="d-flex justify-content-center" id="camputeSites"></div>
+    </div>
+</div>
