@@ -13,11 +13,11 @@ js dilinle yazmış olduğum yönetim paneli web sitesi.
 
 `$ cd campute-panel`
 
-`$yarn`
+`$ yarn`
 
-`$yarn start      # Run this in its own terminal`
+`$ yarn start      # Run this in its own terminal`
 
-`$yarn run watch  # Run this in its own terminal`
+`$ yarn run watch  # Run this in its own terminal`
 
 `$ npm install`
 
