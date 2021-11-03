@@ -21,6 +21,8 @@ js dilinle yazmış olduğum yönetim paneli web sitesi.
 
 `$ npm install`
 
+`$ node server`	# everyting is ok ? let's do Run aplication
+
 #### Detail
 
 	https://stackoverflow.com/questions/53471063/yarn-error-there-are-no-scenarios-must-have-at-least-one
