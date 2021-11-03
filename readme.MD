@@ -9,7 +9,7 @@ js dilinle yazmış olduğum yönetim paneli web sitesi.
 
 #### Run
 
-`$ git clone https://github.com/hmz06967/campute-panel.git`
+`$ git clone https://github.com/hmz06967/network-master-panel.git`
 
 `$ cd campute-panel`
 
