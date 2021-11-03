@@ -7,9 +7,9 @@ js dilinle yazmış olduğum yönetim paneli web sitesi.
   
   javascript
 
-#### Run
+## Run
 
-`$ git clone https://github.com/hmz06967/network-master-panel.git`
+`$ git clone https://github.com/hmz06967/campute-panel.git`
 
 `$ cd campute-panel`
 
@@ -21,4 +21,6 @@ js dilinle yazmış olduğum yönetim paneli web sitesi.
 
 `$ npm install`
 
-https://stackoverflow.com/questions/53471063/yarn-error-there-are-no-scenarios-must-have-at-least-one
+#### Detail
+
+	https://stackoverflow.com/questions/53471063/yarn-error-there-are-no-scenarios-must-have-at-least-one
